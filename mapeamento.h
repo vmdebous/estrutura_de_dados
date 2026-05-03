@@ -2,7 +2,13 @@
 
 #include <stdio.h>
 
-
+typedef int Chave;
+typedef char Valor[22];
+typedef struct map {
+   Chave chave;
+   Valor valor;
+   struct map *prox;
+} *Map;
 #define avanca(i) (i = (i+1) % F->max)
 
 typedef int Itemf;
