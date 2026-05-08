@@ -55,3 +55,16 @@ Na execução, ao utilizar `Lista n == *L`, definimos `n` como o ponteiro que re
 
 - é uma lista encadeada ordenada cujos nós associam valores a chaves
 
+## Dicionário (tabela de hash)
+
+é uma estrutura de dados para associar valores a chaves que:
+- é mais eficiente que um mapeamento simples.
+- é util quando o universo de chaves é muito maior que o conjunto de chaves efetivas.
+- A função hash tem como objetivo mapear chaves com índice do vetor de ponteiro. O problema inicial desse escolha é o conceito de colisões, que são casos onde a função hash direciona o mesmo índice para mais de uma chave.
+- Vetor de mapeamentos são utilizados para tratar colisões.
+
+### Função de hash
+Sejam C um conjunto de chaves e m o tamanho de um vetor
+h: C -> [0...m-1] chave c pertence C num indice correspondente h(c) percente [0...m-1]
+A função h espalha as chaves nas posições de um vetor. Uma função de hash é otima se, e só se, produz um espalhamento uniforme das chaves. Se h é ótima e m é tamanho de C, então o espalhamento é perfeito.
+
